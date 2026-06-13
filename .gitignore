@@ -1,0 +1,5 @@
+# Fichiers internes — ne jamais publier
+CLAUDE.md
+server.ps1
+netlify.toml
+.claude/
