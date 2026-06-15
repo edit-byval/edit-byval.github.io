@@ -395,8 +395,16 @@ section {
   background: #0a0a0a;
 }
 
-/* Pour vidéos horizontales : décommenter et changer 9/16 en 16/9 */
-/* .video-wrapper.horizontal { aspect-ratio: 16/9; } */
+/* Vidéos horizontales (16/9) : ajouter la classe "horizontal" au .video-wrapper */
+.video-wrapper.horizontal { aspect-ratio: 16/9; }
+
+/* Carte pleine largeur (mise en avant d'une vidéo paysage) */
+.video-card.wide {
+  grid-column: 1 / -1;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .video-wrapper video {
   width: 100%;
