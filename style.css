@@ -197,6 +197,10 @@ h2 { font-size: clamp(30px, 4.2vw, 46px); font-weight: 800; line-height: 1.12; l
 .card-wide .frame { flex: 1; }
 .frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
 .card-wide .frame video { object-fit: contain; }
+
+/* Plein écran : vidéo entière dans son ratio d'origine (pas de recadrage 16/9) */
+video:fullscreen { object-fit: contain !important; width: 100% !important; height: 100% !important; }
+video:-webkit-full-screen { object-fit: contain !important; width: 100% !important; height: 100% !important; }
 .card-info { padding: 12px 6px 4px; }
 .card-info h3 { font-size: 16px; font-weight: 600; line-height: 1.3; }
 .card-info span { font-size: 13px; color: var(--muted); }

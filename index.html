@@ -337,6 +337,13 @@
         btn.parentElement.classList.add('playing');
         videos.forEach(o => { if (o !== v) o.pause(); });
       });
+      // En pause : tout revient a l'etat initial (vignette, bouton play, position d'origine)
+      v.addEventListener('pause', () => {
+        if (document.fullscreenElement === v || v.webkitDisplayingFullscreen) return;
+        btn.parentElement.classList.remove('playing');
+        v.controls = false;
+        v.load();
+      });
     });
 
     // Email : ouvre le mail et copie l'adresse
